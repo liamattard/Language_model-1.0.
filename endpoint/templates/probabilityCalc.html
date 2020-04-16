@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+    <title>{{type}} Probability Calculator</title>
+</head>
+
+<body>
+    <a style="padding: 50px;" href="/{{back}}SubMenu?flavour={{flavour}}&valueOne={{flavour}}Unigram&valueTwo={{flavour}}Bigram&valueThree={{flavour}}Trigram">
+        <button style="width: 100px;"> <img style="width: 20px;" src="{{ url_for('static',filename='assets/back.png') }}" alt=""> </button>
+    </a>
+    <div class='table'>
+        <div class='cell'>
+
+            <h1>{{type}} Probability Calculator</h1>
+            <div class="style">
+
+                <div style="align-content: space-between;">
+
+                    <form action="/{{type}}Calculate">
+
+                        <div style="align-content: center;">
+                            <h3 style="color: white;">Calculate the Probability of Word A given Word/Sequence B</h3>
+
+                        </div>
+
+                        <div style="display: inline-block;text-align: end;">
+                            <label for="firstword">Word/sequence A</label>
+                            <input type="text" id="firstword" name="firstword">
+                            <br>
+                            <label for="lastword">Word B</label>
+                            <input type="text" id="lastword" name="lastword">
+                            <br>
+                            <input class="button" type="submit" value="Submit" />
+
+                 
+                        </div>
+                        <div>
+                            <h1 style="color: white;">Result: </h1>
+                            <h1 style="font-size: larger;">{{value}}</h1>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

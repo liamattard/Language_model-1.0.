@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+    <title>{{type}} Generator</title>
+</head>
+
+<body>
+    <a style="padding: 50px;"
+        href="/{{back}}SubMenu?flavour={{flavour}}&valueOne={{flavour}}Unigram&valueTwo={{flavour}}Bigram&valueThree={{flavour}}Trigram">
+        <button style="width: 100px;"> <img style="width: 20px;"
+                src="{{ url_for('static',filename='assets/back.png') }}" alt=""> </button>
+    </a>
+    <div class='table'>
+        <div class='cell'>
+
+
+            <h1>{{type}} Generator</h1>
+            <div class="style">
+
+                <div style="align-content: space-between;">
+
+                    <form style="display: inline-block;text-align: end;" action="/{{type}}Generate">
+                        <label for="count">Limit (default 20)</label>
+                        <input style="margin-right: 50px;" type="number" value="20" id="count" name="count">
+                        <br>
+                        <label for="firstword">First word/s (default &lt;s&gt;)</label>
+                        <input style="margin-right: 50px;" type="text" id="firstword" name="firstword">
+                        <br>
+                        <label for="lastword">Last Word (default &lt;/s&gt;)</label>
+                        <input style="margin-right: 50px;" type="text" id="lastword" name="lastword">
+                        <br>
+                        <input class="button" type="submit" value="Submit" />
+
+                    </form>
+
+                </div>
+
+                <div>
+                    <h1 style="color: white;">Result: </h1>
+                    <h1 style="font-size: larger;">{{value}}</h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

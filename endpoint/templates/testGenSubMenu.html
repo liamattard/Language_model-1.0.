@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{flavour}} Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+</head>
+
+<body>
+    <a style="padding: 50px;" href="/{{valueFour}}Menu">
+        <button style="width: 100px;"> <img style="width: 20px;" src="{{ url_for('static',filename='assets/back.png') }}" alt=""> </button>
+    </a>
+    <div class='table'>
+        <div class='cell'>
+
+            <h1>Select a {{flavour}} Option</h1>
+            <div class="style">
+                <h3 style="color: white;">{{valueFive}} From:</h3>
+                <a href="/{{valueOne}}{{valueSix}}?lastword=&count=20&firstword=">
+                    <button style="width: 300px;">{{valueOne}}</button>
+                </a>
+
+                <br>
+                <br>
+
+                <a href="/{{valueTwo}}{{valueSix}}?lastword=&count=20&firstword=">
+                    <button style="width: 300px;">{{valueTwo}}</button>
+                </a>
+
+
+                <br>
+                <br>
+
+                <a href="/{{valueThree}}{{valueSix}}?lastword=&count=20&firstword=">
+                    <button style="width: 300px;">{{valueThree}}</button>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
